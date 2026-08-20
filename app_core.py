@@ -108,6 +108,15 @@ def country_flag(code):
     return flags.get(code, "🏳️")
 
 
+def flag_img(code, width=20):
+    cc = "eu" if code == "EU27" else str(code or "").lower()
+    return (
+        f"<img src='https://flagcdn.com/w20/{cc}.png' alt='{code}' "
+        f"style='width:{width}px;height:auto;vertical-align:-0.18em;"
+        f"border-radius:2px;box-shadow:0 0 0 1px #e2e8f0;'>"
+    )
+
+
 def source_url(source_id):
     try:
         cat = load_source_catalog()

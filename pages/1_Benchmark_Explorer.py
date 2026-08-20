@@ -107,14 +107,15 @@ for ind_id in ind_ids:
     with st.expander(f"Source attribution for {label} (click to open)"):
         src = ac.source_rows_for(ind_df)
         for _, s in src.iterrows():
-            flag = ac.country_flag(s["country_code"])
+            flag = ac.flag_img(s["country_code"])
             fit = "adapted" if s["fit_level"] in ("B", "C") else "exact match"
             url = s.get("url", "") or ""
             link = f"[open source ↗]({url})" if url else ""
             st.markdown(
-                f"- {flag} **{s['country']}** — {s['survey_name']} "
+                f"{flag}&nbsp; **{s['country']}** — {s['survey_name']} "
                 f"({s['institution']}, fielded {s['field_period']}, n={s['sample_size_total']}) "
-                f"[{fit}] {link}"
+                f"[{fit}] {link}",
+                unsafe_allow_html=True,
             )
 
     with st.expander("Data availability for this indicator"):
