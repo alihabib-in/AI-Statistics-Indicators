@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+    --navy: #1a365d;
+    --slate: #2d3748;
+    --accent: #2b6cb0;
+    --line: #e2e8f0;
+}
+
+/* Base typography */
+html, body, [class*="css"], [data-testid="stMarkdownContainer"], [data-testid="stText"] {
+    font-family: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+    color: #1a202c;
+}
+
+/* Headings */
+h1 { color: #1a365d; font-weight: 700; letter-spacing: -0.01em; }
+h2, h3 { color: #1a365d; font-weight: 600; }
+
+/* Title block */
+[data-testid="stAppViewContainer"] h1 {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #f7fafc;
+    border-right: 1px solid #e2e8f0;
+}
+
+section[data-testid="stSidebar"] .stRadio label,
+section[data-testid="stSidebar"] .stSelectbox label,
+section[data-testid="stSidebar"] .stMultiSelect label {
+    color: #1a202c !important;
+    font-weight: 600;
+}
+
+section[data-testid="stSidebar"] hr {
+    border-color: #e2e8f0;
+}
+
+/* Buttons */
+.stButton > button {
+    background-color: #1a365d;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+.stButton > button:hover {
+    background-color: #2b6cb0;
+    color: #ffffff;
+}
+
+/* Download button */
+.stDownloadButton > button {
+    background-color: #ffffff;
+    color: #1a365d;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* Links */
+a { color: #2b6cb0 !important; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Expandable notes */
+.streamlit-expanderHeader {
+    color: #1a365d !important;
+    font-weight: 600;
+    background-color: #f7fafc;
+    border-radius: 8px;
+}
+
+/* Info / warning / success banners rounded */
+[data-testid="stAlert"] {
+    border-radius: 8px;
+}
+
+/* Captions */
+.stCaption { color: #718096 !important; }
+
+/* DataFrame styling */
+[data-testid="stDataFrame"] {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Plotly container: subtle card */
+[data-testid="stPlotlyChart"] {
+    border: 1px solid #edf2f7;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+/* Arabic RTL */
+[dir="rtl"] { text-align: right; }

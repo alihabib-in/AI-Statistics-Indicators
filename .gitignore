@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Excel temp / lock files
+~$*
+
+# Research artifacts & downloads (not part of the app; may contain survey instruments/data)
+*.xlsx
+*.xls
+*.pdf
+*.pptx
+*.zip
+*.docx
+
+# Working directories
+LM_Slides/
+Source/
+sample/
+
+# Research notes (kept out of the public repo)
+deepseek_csv_benchmark.txt
+13_8_Updated.md
+AI-Adoption-Benchmarking-Fact-Sheet.md
+GPT_Markdown.md
+SCAD_AI_International_Benchmarking_PowerPoint_LLM_Prompt.md
+Updated - AI Adoption.md
+tableConvert.com_8v413h.md
+scad-ai-expanded-benchmarking-report-*.md
+scad-ai-expanded-benchmarking-table*.csv
+*.log
+
+# Root-level research working files (questionnaire / working CSVs)
+ai_survey_question_list_csv.csv
+ai_adoption_survey_ques.csv
+deepseek_csv_benchmark.csv
+Final_OAI_Source.csv
+SURVEY_METRICS_AI_CSV.csv
+Routing.csv
+Intro.csv
+Questions.csv
+OT1.csv
